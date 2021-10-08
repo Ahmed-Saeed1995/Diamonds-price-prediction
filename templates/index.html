@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title >Diamond price prediction</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../static/css/templatemo-diagoona.css" rel="stylesheet" />
+    <link href="../static/fontawesome/css/all.min.css" rel="stylesheet" />
+
+
+</head>
+<body style="background-image: url('../static/img/diamond.jpg')  ; background-position-x: right;">
+
+    <div class="tm-container">
+        <div>
+            <div class="tm-row pt-4">
+                <div class="tm-col-left">
+                    <div class="tm-site-header media">
+                        <img src='../static/img/Logo1.png' style = "width:80px" class="  mt-1 tm-logo"></img>
+                      <!-- <img src='../static/logo.png' class="fas fa-umbrella-beach fa-3x mt-1 tm-logo"></img>-->
+
+                        <div class="media-body">
+                            <h1 class="tm-sitename">Diamond</h1>
+                        </div>        
+                    </div>
+                </div>
+            </div>
+           
+
+        
+            <div class="tm-row">
+                
+                <div class="tm-col-left"></div>
+                {%if diamond_price %}
+                <h1 style="color: rgb(253, 253, 253);">The diaomnd costs <span style="color: rgb(0, 98, 255);"> {{diamond_price}}$</span></h1> 
+                {% endif %}
+                <main class="tm-col-right tm-contact-main">
+                    
+                     <!-- carat	depth	table x	y	z	cut_grade	color_grade	clear_quality -->
+                     
+                    <section class="tm-content tm-contact">
+                        
+                        <h2 class="mb-4 tm-content-title">predict my diamond price.</h2>
+                        <h5 >Please fill in your diamond details.</h5>
+                        
+                        <hr></hr>
+                     
+                        <!-- Start Form-->
+                        <form id="contact-form" action="/predict" method="GET">
+                            <!--My select form: from scatch-->
+                            
+                            <div class="form-group mb-4">
+                                <input type="text" name="carat" class="form-control" placeholder="carat weight (0.5 - 7.17 CT)"  required=""/>
+                            </div>
+                       <div class="form-group mb-4">
+                        <input type="text" name="x" class="form-control" placeholder="length (0 - 10.74 in mm)" required=""   />
+                    </div>
+                    <div class="form-group mb-4">
+                        <input type="text" name="y" class="form-control" placeholder="width (0 - 58.9 in mm)" required="" />
+                    </div>
+                    <div >
+                        <input type="text" name="z" class="form-control" placeholder="depth (0 - 31.8 in mm)" required="" />
+                    </div>
+                    <div class="form-group mb-4">
+                    </div>
+                            <div >
+                                <label class ='drop-down-name'>Color grade</label>
+                                <select name='color' class="drop_down">
+                                    <option value='6' >D</option>
+                                    <option value='5' >E</option>
+                                    <option value='4' >F</option>
+                                    <option value='3' >G</option>
+                                    <option value='2' >H</option>
+                                    <option value='1' >I</option>
+                                    <option value='1' >J</option>
+                                </select>
+                            </div>
+
+                            <div >
+                                <label class ='drop-down-name'>Cut grade</label>
+                                <select name='cut_grade' class="drop_down">
+                                    <option value='5' >Ideal</option>
+                                    <option value='4' >Premium</option>
+                                    <option value='3' >Very Good</option>
+                                    <option value='2' >Good</option>
+                                    <option value='1' >Fair</option>
+                                </select>
+                            </div>
+
+                            <div >
+                                <label class ='drop-down-name'>Clarity Quality</label>
+                                <select name='clarity_quality' class="drop_down">
+                                    <option value='8' >IF</option>
+                                    <option value='7' >VVS1</option>
+                                    <option value='6' >VVS2</option>
+                                    <option value='5' >VS1</option>
+                                    <option value='4' >VS2</option>
+                                    <option value='3' >SI1</option>
+                                    <option value='2' >SI2</option>
+                                    <option value='1' >I1</option>
+                                </select>
+
+                            </div>
+                            <div class="text-right">
+                                <button type="submit" class="btn btn-big btn-primary">Predict my diamond price</button>
+                            </div>
+                        </form>
+                    </section>
+                </main>
+                
+            </div>
+        </div> 
+        
+        <div class="tm-row">
+            <div class="tm-col-left text-center">            
+               <!-- <ul class="tm-bg-controls-wrapper">
+                    <li class="tm-bg-control active" data-id="0"></li>
+                    <li class="tm-bg-control" data-id="1"></li>
+                    <li class="tm-bg-control" data-id="2"></li>
+                </ul>        -->     
+                
+            </div>        
+            <div class="tm-col-right tm-col-footer">
+                <footer class="tm-site-footer text-right">
+                    <p class="mb-0">Designed by Eng Ahmed Saeed hamed
+                    
+                </footer>
+            </div>  
+        </div>
+
+        <div class="tm-bg">
+            <div class="tm-bg-left"></div>
+            <div class="tm-bg-right"></div>
+        </div>
+    </div>
+            
+    
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/js/jquery.backstretch.min.js"></script>
+    <script src="../static/js/templatemo-script.js"></script>
+
+</body>
+
+</html>
