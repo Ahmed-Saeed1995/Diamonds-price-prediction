@@ -4,6 +4,7 @@ Diamond price calculated by 4 important elemnts called the 4C\`s they are
 - Color
 - Clarity
 - Cut
+
 Those important features determine the price of a diamond as well as x, y, z -> the length, width, height included in this dataset,
 beacuse the have strong correlation between them and price.
 
